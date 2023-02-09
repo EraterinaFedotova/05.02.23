@@ -5,37 +5,35 @@
 
 // 6, 1, 33 -> [6, 1, 33]
 
-// int [] numbers = new int[8];
-// Console.Write("[");
 
-// for (int i = 0; i < numbers.Length; i++)
-//  {
-//     numbers [i] = new Random().Next(0, 11);
-//     Console.Write(" " + Method (i) + " ");
-//  }
-// Console.Write("]");
 
-// int Method (int a)
-// {
-//     return numbers[a];
-// }
+Console.Clear();
 
-int N = 8;
-
-int[] SetArray(int x)
+void FillArray(int[] collection)
 {
-    int[] arr = new int[x];
-    for (int i = 0; i < x; i++)
+    int lendth = collection.Length;
+    int index = 0;
+    while(index < lendth)
     {
-        arr[i] = new Random().Next(1, 100);
+        collection[index] = new Random().Next(1, 10);
+        index ++;
     }
-    return arr;
 }
 
-void PrintArray(int[] array)
+void PrintArray(int[] col)
 {
-    for (int i = 0; i < array.Length; i++)
-        System.Console.Write($"{array[i]} ");
+    int count = col.Length;
+    int position = 0;
+    while(position < count)
+    {
+        Console.WriteLine(col[position]);
+        position ++;
+    }
 }
 
-PrintArray(SetArray(N));
+int [] array = new int[8];
+
+FillArray(array);
+PrintArray(array);
+Console.WriteLine();
+
